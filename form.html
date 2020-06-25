@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Registration form</title>
+</head>
+<body bgcolor=lightblue>
+<center>
+<style>
+fieldset{
+width:300px;
+border-width:5px;
+border-color:green;
+}
+tr{
+color:green;
+}
+</style>
+<form>
+<fieldset display: block length=100 width=100 >
+<legend><h2>Registration form</h2></legend>
+<center>
+<table  cellspacing=2 cellpadding=2>
+<tr>
+<td><b>Name*:</b></td>
+<td><input type=text name=name length=40 maxlength=30></td>
+</tr>
+<tr>
+<td><b>Mobile No:</b></td>
+<td><input type=number name=phoneno length=10 ></td>
+</tr>
+<tr>
+<td><b>Course*:</b></td>
+<td><input type="radio" id="bachelors" name="course">
+<label for="course">Bachelors</label><br>
+<input type="radio" id="bachelors" name="course">
+<label for="course">masters</label></td><br>
+</tr>
+<tr>
+<td><b>Description*:</b></td>
+<td><textarea cols="50" rows="5"></textarea></td>
+</tr>
+<tr>
+<td><b>Subjects Interests*:</b></td>
+<td><input type="checkbox" id="subject" name="subject" value="AI">
+<label for="subject">AI</label><br>
+<input type="checkbox" id="subject1" name="subject1" value="ML">
+<label for="subject1">Machine Learning</label><br>
+</td>
+</tr>
+
+<tr>
+<td><input type=submit value=SUBMIT>
+</tr>
+</table>
+</center>
+</fieldset>
+</form>
+</body>
+</center>
+</html>
