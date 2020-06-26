@@ -1,59 +1,49 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Registration form</title>
-</head>
-<body bgcolor=lightblue>
-<center>
+<title>form</title>
 <style>
-fieldset{
-width:300px;
-border-width:5px;
-border-color:green;
-}
-tr{
-color:green;
+h1{
+text-align:center
 }
 </style>
-<form>
-<fieldset display: block length=100 width=100 >
-<legend><h2>Registration form</h2></legend>
-<center>
-<table  cellspacing=2 cellpadding=2>
-<tr>
-<td><b>Name*:</b></td>
-<td><input type=text name=name length=40 maxlength=30></td>
-</tr>
-<tr>
-<td><b>Mobile No:</b></td>
-<td><input type=number name=phoneno length=10 ></td>
-</tr>
-<tr>
-<td><b>Course*:</b></td>
-<td><input type="radio" id="bachelors" name="course">
-<label for="course">Bachelors</label><br>
-<input type="radio" id="bachelors" name="course">
-<label for="course">masters</label></td><br>
-</tr>
-<tr>
-<td><b>Description*:</b></td>
-<td><textarea cols="50" rows="5"></textarea></td>
-</tr>
-<tr>
-<td><b>Subjects Interests*:</b></td>
-<td><input type="checkbox" id="subject" name="subject" value="AI">
-<label for="subject">AI</label><br>
-<input type="checkbox" id="subject1" name="subject1" value="ML">
-<label for="subject1">Machine Learning</label><br>
-</td>
-</tr>
-
-<tr>
-<td><input type=submit value=SUBMIT>
-</tr>
-</table>
-</center>
-</fieldset>
-</form>
-</body>
-</center>
-</html>
+<script>
+function display()
+{
+var name=document.getElementById("name").value;
+document.writeln("Thank you,"+name+" for registering.<br>");
+}
+</script>
+</head>   
+<body>  
+<form>    
+   <h1>Form</h1>  
+  <label> name :</label>   
+<input type="text" name="name" id="name" size="15" required /><br>
+<label>   
+Subjects:  
+</label><br>     
+<input type="checkbox" id="sub1" name="sub1" value="ai">
+<label for="sub1">AI</label><br>
+<input type="checkbox" id="sub2" name="sub2" value="ml">
+<label for="sub2">Machine Learning</label><br>
+<div>  
+<label>   
+Course :  
+</label><br>  
+<input type="radio" value="Bachelors" name="gender"> Bachelors   
+<input type="radio" value="Masters" name="gender"> Masters 
+</div>  
+<label>   
+Phone :  
+</label>     
+<input type="text" name="phone" placeholder="phone no." size="10" required/>
+<br>   
+Description:  <br>
+<textarea cols="80" rows="5">  
+</textarea>  
+<br>
+    <button type="submit" onClick="display()">SUBMIT</button>    
+</form>  
+</body>  
+</html>  
