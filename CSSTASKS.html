@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Background image</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        li,a,button{
+            font-family:"Monsterrat",sans-serif;
+            font-weight:500;
+            font-size:16px;
+            color:#000;
+            text-decoration:none;
+        }
+        header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:30px 10%;        
+        }
+        .logo{
+            cursor:pointer;
+        }
+        .nav_links{
+            list-styles:none;
+        }
+        .nav_links li{
+            display:inline-block;
+            padding:0px 20px;
+        }
+        .nav_links li a{
+            transition:all 0.3sec ease 0s;
+        }
+        .nav_links li a:hover{
+            color:#0088a9;
+        }
+        button{
+            padding:9px 25px;
+            background-color:rgba(0,136,169,1);
+            border:none;
+            border-radius:50px;
+            cursor: pointer;
+            transition:all 0.3sec ease 0s;
+        }
+        button:hover{
+            background-color:rgba(0,136,169,0.8);
+        }
+        .content{
+            width:1000px;
+            height:500px;
+            border:1px solid #000;
+            margin-top:30px;
+            position:relative;
+            background-image:url("https://ak9.picdn.net/shutterstock/videos/14207009/thumb/1.jpg?i10c=img.resize(height:160)");
+
+        }
+        .content h1{
+            position:absolute;
+            top:100px;
+            left:300px;
+            color:white;
+            font-family:serif;
+            font-style:italic;
+        }
+        .content h1.hidden{
+            display:none;
+        }
+        .colors{
+            width:100%;
+            height:500px;
+            border:1px solid #000;
+            margin-top:30px;
+            position:relative;
+            background-color:#92a8d1;
+        }
+        .colors table{
+            border-collapse: collapse;
+        }
+        .colors td {
+            padding: 15px;
+        }
+        .colors td[target]{
+            background-color:yellow;
+        }
+        .list li:nth-child(even){
+            background:orange;
+        }
+        .list li:nth-child(odd){
+            background:green;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img class="logo" src="https://help.github.com/assets/images/site/set-up-git.gif" alt="logo">
+    <h1>MY WEBPAGE</h1>
+    <nav>
+        <ul class="nav_links">
+            <li><a href="aboutHTML.html">Home</a></li>
+            <li><a href="form.html">Registration</a></li>
+            <li><a href="   aboutME.html">PersonalDetails</a></li>
+        </ul>
+    </nav>
+    <a class"con" href="#"><button>Contact</button></a>
+</header>
+<img src="https://www.sololearn.com/Uploads/html-css.jpg" style="float:right;width:400px;height:400px;margin: 25px 50px 75px 100px;">
+<p><strong>BackgroundImage</strong></p>
+<div class="content">
+        <h1>Neha Sindhuja RAVURI</h1>
+        <h1 class="hidden">HELLO</h1>
+</div>
+<!-- <div class"image">
+<img src="https://www.sololearn.com/Uploads/html-css.jpg">
+</div>-->
+<p><strong>BackgroundColor</strong></p>
+<div class="colors" align="center">
+    <table style="width:50%" >
+        <tr>
+            <td target="_blank"><b>Subject Name</b></td>
+            <td><b>Marks Obtained</b></td>
+        </tr>
+        <tr>
+            <td>Compiler Design</td>
+            <td target="_blank" align="right">86</td>
+        </tr>
+        <tr>
+            <td target="_blank">Distributed Systems</td>
+            <td align="right">89</td>
+        </tr>
+        <tr>
+            <td>Professional Ethics</td>
+            <td target="_blank" align="right">76</td>
+        </tr>
+        <tr>
+            <td target="_blank">Software Engineering</td>
+            <td align="right">75</td>
+        </tr>
+        <tr>
+            <td>Web Technologies</td>
+            <td target="_blank" align="right">70</td>
+        </tr>
+        <tr>
+            <td target="_blank">Operating Systems</td>
+            <td align="right">70</td>
+        </tr>
+        </table>
+</div>
+<ol type="1" class="list">
+<li>CSE</li>
+<li>Web Technologies</li>
+<li>Data Structures</li>
+<li>ECE</li>
+<li>Advance Embedded Systems</li>
+<li>Digital Image Processing</li>
+<li>MECH</li>
+<li>Statistics and Dynamics</li>
+<li>Material Engineering</li>
+</ol>
+</body>
+</html>
