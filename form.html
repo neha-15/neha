@@ -8,42 +8,89 @@ text-align:center
 }
 </style>
 <script>
-function display()
+var a=1;
+            var b=2;
+            var ar=[1,2,3,4,5];
+            var x=ar.toString();
+            document.write("<br />")
+            console.log(a,b);
+            document.write("<br />")
+            document.write(Math.round(4.7));
+            document.write("<br />")
+            document.write(Math.pow(7,4));
+            document.write("<br />")
+            document.write(""+x+" index3="+ar[3].toString());
+            document.write("<br />")
+            document.write(Math.sqrt(64));
+            document.write("<br />")
+            document.write(Math.abs(-7.4));
+            document.write("<br />")
+            document.write(Math.ceil(7.4));
+            document.write("<br />")
+            document.write(Math.floor(5.5));
+            document.write("<br />")
+            document.write(Math.sin(90));
+            document.write("<br />")
+            document.write(Math.random());
+function validation()
 {
-var name=document.getElementById("name").value;
-document.writeln("Thank you,"+name+" for registering.<br>");
+    var a=document.getElementById('name').value;
+    var b=document.getElementById('phone').value;
+    var phoneno=/[7-9]\d{9}/;
+    var valid=false;
+   // alert("name:"+a);
+    if(a=="")
+    {
+      alert("please enter your name");
+    }
+    if(!isNaN(a))
+    {
+      alert("please enter only characters");
+      return false;
+    }
+    if(document.getElementById("sub1").checked){
+      valid=true;
+    }
+    if(document.getElementById("sub2").checked){
+      valid=true;
+    }
+    if(valid){
+      return true;
+    }
+    else{
+      alert("select atleast one subject");
+      return false;
+    }
+    if(phoneno.test(b))
+    {
+      return true;
+    }
+    else{
+      alert("please enter only numbers in mobile number");
+      return false;
+    }
+    alert("name:"+a);
 }
 </script>
 </head>   
 <body>  
-<form>    
+<form name="form" method="post" onsubmit="return validation()">    
    <h1>Form</h1>  
   <label> name :</label>   
-<input type="text" name="name" id="name" size="15" required /><br>
+<input type="text" name="name" id="name" size="15"><br>
 <label>   
 Subjects:  
 </label><br>     
-<input type="checkbox" id="sub1" name="sub1" value="ai">
-<label for="sub1">AI</label><br>
-<input type="checkbox" id="sub2" name="sub2" value="ml">
-<label for="sub2">Machine Learning</label><br>
+<input type="checkbox"  id="sub1" value="AI">AI<br>
+<input type="checkbox" id="sub2" value="ML">Machine Learning<br>
 <div>  
-<label>   
-Course :  
-</label><br>  
-<input type="radio" value="Bachelors" name="gender"> Bachelors   
-<input type="radio" value="Masters" name="gender"> Masters 
-</div>  
+<label>     
 <label>   
 Phone :  
 </label>     
-<input type="text" name="phone" placeholder="phone no." size="10" required/>
-<br>   
-Description:  <br>
-<textarea cols="80" rows="5">  
-</textarea>  
+<input type="text" name="phone" id="phone" placeholder="phone no." size="10">
 <br>
-    <button type="submit" onClick="display()">SUBMIT</button>    
+    <button type="submit" name="sub" value="Submit" onClick="validation()">SUBMIT</button>    
 </form>  
 </body>  
 </html>  
