@@ -7,6 +7,40 @@
   text-align: center;
 }
 </style>
+<script>
+  var d=new Date();
+  console.log(d);
+  function displayDate(){
+    document.write(Date());
+  }
+function fib()
+{
+var a=0;
+var b=1;
+var c,i;
+var output;
+var n=Number(document.getElementById("n").value);
+output=a+" "+b+" ";
+for(i=1;i<=n;i++)
+{
+c=a+b;
+output=output+c+" ";
+a=b;
+b=c;
+}
+document.getElementById("ar").value=output;
+}
+function range()
+{
+  var output;
+ var x=Number(document.getElementById("x").value); 
+if(x>=10 && x<=100)
+{
+  output="in the given range";
+}
+document.getElementById("ar").value=output;
+}
+</script>
 </head>
 <body>
 <div class="mydiv">
@@ -24,5 +58,13 @@ HTML document contains two parts<ol type="1">
 <ol type="1">
 <li>b tag:defines bold text</li>
 </ol>
+<button onclick="displayDate()">want to know time</button><br>
+Enter value:<input type="text" id="n"><br>
+<button type="button"  onclick="fib()">fibonacci</button><br>
+Enter value:<input type="text" id="x"><br>
+<button type="button"  onclick="range()">Range</button><br>
+output:
+<br>
+<textarea name="s" id="ar" rows="5" cols="40"></textarea>
 </body>
 </html>
