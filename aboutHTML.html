@@ -8,8 +8,15 @@
 }
 </style>
 <script>
-  var d=new Date();
-  console.log(d);
+/*let test=document.getElementById("test");
+test.addEventListener("mouseenter",function(event)){
+  event.target.style.color="purple";
+  setTimeout(function()){
+    event.target.style.color="";
+  },500);
+},false);*/
+  //var d=new Date();
+  //console.log(d);
   function displayDate(){
     document.write(Date());
   }
@@ -37,20 +44,36 @@ function range()
 if(x>=10 && x<=100)
 {
   output="in the given range";
+  document.getElementById("ar").value=output;
 }
-document.getElementById("ar").value=output;
+try{
+  output="not in range";
+  if(x==""){
+    throw "empty";
+  }
+}
+  catch(err){
+    document.getElementById("ar").value=" "+err;
+  }
+}
+function display(){
+  var s=document.getElementById("para").innerHTML;
+  var m=s.split("");
+  document.getElementById("s1").innerText="word 5:"+m[5];
+  document.getElementById("s2").innerText="word 7:"+m[7];
+  document.getElementById("s3").innerText="word 10:"+m[10];
 }
 </script>
 </head>
 <body>
 <div class="mydiv">
 <h3>HYPER TEXT MARKUP LANGUAGE</h3>
-<p>HTML is the standard markup language for creating web pages.
+<p id="para">HTML is the standard markup language for creating web pages.
 HTML stands for hyper text markup language.A markup language is set of markup tags.
 HTML documents are described by HTML tags.Each HTML tag describes different document content and these tags are not case sensitive.
 </p>
 </div>
-HTML document contains two parts<ol type="1">
+HTML document contains two parts<ol type="1" id="test">
 <li>Head Section(includes title of web page)</li>
 <li>Body Section(body of program)</li>
 </ol>
@@ -58,11 +81,15 @@ HTML document contains two parts<ol type="1">
 <ol type="1">
 <li>b tag:defines bold text</li>
 </ol>
-<button onclick="displayDate()">want to know time</button><br>
+<button onmouseover="displayDate()">want to know time</button><br>
 Enter value:<input type="text" id="n"><br>
-<button type="button"  onclick="fib()">fibonacci</button><br>
+<button type="button"  ondblclick="fib()">fibonacci</button><br>
 Enter value:<input type="text" id="x"><br>
 <button type="button"  onclick="range()">Range</button><br>
+<button type="button"  onclick="display()">String display</button>
+<p id="s1"></p><br>
+<p id="s2"></p><br>
+<p id="s3"></p><br>
 output:
 <br>
 <textarea name="s" id="ar" rows="5" cols="40"></textarea>
